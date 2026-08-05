@@ -5,7 +5,7 @@
 #
 # The following models and estimators are considered:
 #
-#   1. Student-t maximum likelihood estimator with five
+#   1. Student-t maximum likelihood estimator with four
 #      degrees of freedom;
 #   2. normal maximum density power divergence estimator
 #      (MDPDE);
@@ -342,10 +342,10 @@ conf_level <- 0.95
 # 8. Student-t maximum likelihood fit
 #
 # The degrees of freedom are assumed to be known and are fixed
-# at nu = 5.
+# at nu = 4.
 # ------------------------------------------------------------
 
-nu <- 5
+nu <- 4
 
 fit_t <- fit_lmve_t(
   Y = Y,
