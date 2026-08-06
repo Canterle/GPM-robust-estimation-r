@@ -369,10 +369,7 @@ conf_level <- 0.95
 # Configuration of the current SQV procedure.
 #
 # Each q is fitted independently from the same original starting
-# vector. If the fit at q fails, does not converge, or produces
-# invalid standard errors, the procedure retries at q - 0.001.
-# If both attempts fail, the corresponding comparison receives
-# SQV = L + 0.001 and is therefore classified as unstable.
+# vector.
 sqv_control <- list(
   # Number of values in the initial grid. With the endpoints
   # above, 21 values produce spacing 0.01.
