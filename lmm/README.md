@@ -514,7 +514,7 @@ list(
 
 The initial grid is fixed from `q = 1` to `q = 0.8`.
 
-The current implementation fits each `q` independently from the same original starting vector. When a fit at `q` fails, does not converge, or produces invalid standard errors, the SQV procedure attempts `q - 0.001`. If both attempts fail, the comparison is classified as unstable.
+The current implementation fits each `q` independently from the same original starting vector. 
 
 `compute_vcov = TRUE` is required because SQV uses standardized estimates.
 
