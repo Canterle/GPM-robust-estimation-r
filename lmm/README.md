@@ -235,6 +235,8 @@ Delta <- function(gamma) {
 
 It must return an \(m \times m\) symmetric positive-definite matrix, where \(m\) is the number of columns of each `Z[[i]]`.
 
+Although the theoretical model allows a positive-semidefinite random-effects covariance matrix, the numerical implementation evaluates only parameter values for which the covariance matrix is positive definite. Boundary covariance fits are therefore outside the implemented optimization domain.
+
 Supported structures include:
 
 - diagonal covariance matrices;
