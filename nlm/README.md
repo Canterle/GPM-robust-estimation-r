@@ -379,17 +379,6 @@ fit$max.abs.score
 
 A convergence code of zero is expected from `optim()`.
 
-## Current consistency issues in `application_radioimmunoassay.R`
-
-`application_radioimmunoassay.R` contains copied elements that should be corrected before distributing or running it as a final application:
-
-1. The Student-t application fit is initially created with `nu = 4`, but `nu` is later overwritten with `9699` for an auxiliary normal-approximation fit. Subsequent labels that use the global `nu` can therefore display the wrong value.
-2. The MAE block uses indices `78` and `80`, although the radioimmunoassay data contain only 14 observations. The intended excluded observation in this application is observation 9.
-3. The MAE labels refer to `nu = 5` and to removing observations 78 and 80, which are inconsistent with the application description.
-4. The auxiliary objects `fit_mle2` and `fit_mle3` are implementation checks rather than distinct methods required in the final comparison.
-
-These points are documented rather than silently changed.
-
 ## Reproducibility
 
 The simulated examples contain commented `set.seed()` calls. Uncomment the relevant line to reproduce the same sample on every run.
