@@ -589,7 +589,7 @@ mae_mle_wo_all <- mean(
   abs(y - mu_mle_wo)
 )
 
-# MAE computed after removing observations 78 and 80
+# MAE computed after removing observation 9
 
 mae_t_wo <- mean(
   abs(
@@ -634,7 +634,7 @@ mae_comparison <- data.frame(
     "MDPDE",
     "Corrected MLqE",
     "Normal MLE",
-    "Normal MLE without observations 9"
+    "Normal MLE without observation 9"
   ),
   MAE_all_observations = c(
     mae_t_all,
