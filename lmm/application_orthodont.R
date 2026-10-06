@@ -436,9 +436,9 @@ tau <- function(
 bobyqa_control <- list(
   maxeval = 100000,
   xtol_rel = 0,
-  ftol_rel = 0,
-  xtol_abs = 1e-8,
-  ftol_abs = 1e-8
+  xtol_rel = 0,
+  xtol_rel = 1e-9,
+  ftol_rel = 1e-9
 )
 
 jacobian_method <- "Richardson"
